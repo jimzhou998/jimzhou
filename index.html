@@ -3,123 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我们的爱情故事</title>
-    <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            background: linear-gradient(135deg, #ffecda, #ff6e7f);
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            animation: fadeIn 1s ease-in-out;
-        }
-        h1 {
-            color: #ff6e7f;
-            animation: slideIn 1s ease-in-out;
-        }
-        p {
-            color: #666;
-        }
-        button {
-            background-color: #ff6e7f;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #ff3b5a;
-        }
-        #message {
-            margin-top: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        #message.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .image-container {
-            margin: 20px 0;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .content {
-            margin: 20px 0;
-        }
-        .timer {
-            font-size: 24px;
-            color: #ff6e7f;
-            margin-top: 20px;
-        }
-    </style>
+    <title>淘宝官网</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>我们的爱情故事</h1>
-        <p>这是一个充满爱与浪漫的页面。</p>
-        <div class="image-container">
-            <img src="https://via.placeholder.com/600x400?text=Love+Image" alt="爱情图片">
+    <header>
+        <div class="logo">
+            <img src="https://img.alicdn.com/tfs/TB1yhoIXHzqK1RjSZFgXXa7JXXa-294-60.png" alt="淘宝">
         </div>
-        <div class="content">
-            <h2>关于这个页面</h2>
-            <p>这个页面展示了我们爱情的美好瞬间，通过添加各种元素和样式，我们可以让页面看起来更加温馨和浪漫。</p>
-            <h2>为什么选择这个设计</h2>
-            <p>这个设计采用了柔和而浪漫的风格，使用了渐变背景和动画效果来提升用户体验。按钮和消息提示也经过精心设计，以提供更好的交互反馈。</p>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">天猫</a></li>
+                <li><a href="#">淘宝</a></li>
+                <li><a href="#">聚划算</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">商家</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="搜索 淘宝 商品">
+            <button>搜索</button>
         </div>
-        <button onclick="showMessage()">点击我</button>
-        <p id="message">感谢您的访问！</p>
-        <div class="timer" id="timer">距离我们相遇已经过去了 <span id="days">0</span> 天 <span id="hours">0</span> 小时 <span id="minutes">0</span> 分钟 <span id="seconds">0</span> 秒</div>
-    </div>
-    <script>
-        function showMessage() {
-            document.getElementById('message').classList.add('show');
-        }
-
-        // 计时器功能
-        const startDate = new Date('2023-01-01'); // 假设相遇日期为2023年1月1日
-        function updateTimer() {
-            const now = new Date();
-            const difference = now - startDate;
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours;
-            document.getElementById('minutes').textContent = minutes;
-            document.getElementById('seconds').textContent = seconds;
-        }
-        setInterval(updateTimer, 1000);
-        updateTimer(); // 初始化计时器
-    </script>
+        <div class="user">
+            <a href="#" class="login">登录</a>
+            <a href="#" class="register">注册</a>
+            <a href="#" class="cart">购物车</a>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <img src="https://img.alicdn.com/tfs/TB1XvZIXHzqK1RjSZFgXXa7JXXa-1920-600.jpg" alt="淘宝首页轮播图">
+        </section>
+        <section class="products">
+            <h2>热门商品</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="https://img.alicdn.com/bao/uploaded/i1/O1CN01010101010101010_!!0-item_pic.jpg" alt="商品1">
+                    <p>商品名称</p>
+                    <p>价格：￥100</p>
+                </div>
+                <!-- 更多商品项 -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 淘宝网 版权所有</p>
+    </footer>
 </body>
 </html>
